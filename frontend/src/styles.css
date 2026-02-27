@@ -1,0 +1,247 @@
+body {
+  font-family: Arial;
+  background: #f4f6f9;
+  margin: 0;
+  /* prevent accidental horizontal overflow from long generated content */
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: #3e9008cb;
+  color: white;
+  padding: 27px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.navbar h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.navbar > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-container {
+  width: 300px;
+  margin: 80px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+}
+
+.form-container input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  background: #eb2525;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard, .generator, .history {
+  padding: 30px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 72px);
+}
+
+.dashboard h1 {
+  font-size: 28px;
+  margin: 0 0 12px 0;
+}
+
+.generator {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.generator-box {
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+.generator-box h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+.generator-box input,
+.generator-box select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  display: block;
+  height: 48px;
+  line-height: 1.2;
+  font-size: 15px;
+}
+
+/* ensure select arrow doesn't change visual width in some browsers */
+.generator-box select {
+  -webkit-appearance: menulist;
+  appearance: menulist;
+}
+
+.generator-box button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lesson-box pre,
+.lesson-card pre {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-family: inherit;
+  font-size: 15px;
+  color: #222;
+  margin: 0;
+  padding: 18px;
+  background: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  max-height: 480px;
+  overflow: auto;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lesson-box, .lesson-card {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lesson-card {
+  width: 90%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Gradient overlay on top of a background image placed in frontend/public/education.jpg */
+  background-image: linear-gradient(135deg, rgba(37,172,235,0.55), rgba(30,64,175,0.55)), url('/education.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 10px;
+}
+
+.auth-box p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.auth-box input:focus {
+  border: px solid #2563eb;
+}
+
+.auth-box button {
+  width: 106%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auth-box button:hover {
+  background: #1e40af;
+}
+
+.switch-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch-text a {
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+}
